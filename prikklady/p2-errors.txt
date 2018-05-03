@@ -1,0 +1,19 @@
+// Undefined var
+print(a);
+
+//Assignig to array
+Number a = 5;
+a[4] = 22;
+
+//Assign to non inicialized var;
+Number a = 25;
+b = 23;
+
+// Assert
+assert(5+5);
+
+//size
+size(5);
+
+//Undefined func
+call();

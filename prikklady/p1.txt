@@ -1,0 +1,13 @@
+Number a = 25;
+Number pi = 3.14;
+String s= "string";
+String s2 = 'dom';
+Boolean b1= true;
+Boolean b2 = 5==5;
+Boolean b3 = '5' == 5;
+List zoz = [2,4,5,6];
+Object person = {"meno" : "Dominik", "priezvisko": "Knechta"};
+
+print(zoz[2]);
+
+println(person.meno);

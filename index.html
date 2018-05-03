@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Webi interface</title>
+	<style type="text/css" media="screen">
+		#code {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			width: 600px;
+			height:400px;
+		}
+	</style>
+</head>
+<body>
+	<div id="textInput" style="float:left; margin-bottom:2em;">
+		<div id="code">//write code here</div>
+		<button type="button" id="submit-btn" style="position: relative;top:400px">Compile</button>
+	</div>
+
+
+	<div id="output" style="padding-left: 5em;position: absolute;left: 600px">
+		<div id="buttons"></div>
+	</div>
+
+	<div id="console" style="position: absolute;top:450px;">
+		Console result:
+		<p id="result" style="border: 1px solid black; width: 450px; min-height: 100px;height: auto"></p>
+	</div>
+
+	<script src="bundle.js"></script>
+	<script src="ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+        var editor = ace.edit("code");
+        editor.setTheme("ace/theme/twilight"); //tomorrow_night_bright, tomorrow
+        editor.session.setMode("ace/mode/javascript");
+        editor.session.setOption('useWorker',false);
+        document.getElementById('code').style.fontSize='14px';
+	</script>
+</body>
+</html>
