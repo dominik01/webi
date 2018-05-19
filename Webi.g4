@@ -27,7 +27,7 @@ functionCall
  | Assert '(' expression ')'                                                    #assertFunctionCall
  | Size '(' expression ')'                                                      #sizeFunctionCall
  | Identifier '.' Push '(' expression ')'                                       #listPushExpresion
- | Identifier '.' Pop '()'                                                      #listPopExpression
+ | Identifier '.' Pop '(' ')'                                                      #listPopExpression
  | 'new' Identifier '(' exprList? ')'                                           #newObjectCall
  | 'initPlayground' '(' exprList? ')'                                           #newCanvasCall
  | 'drawText' '(' exprList? ')'                                                 #drawTextCall

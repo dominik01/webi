@@ -1,5 +1,6 @@
 <html>
 <head>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<title>Webi interface</title>
 	<style type="text/css" media="screen">
 		#code {
@@ -28,6 +29,24 @@
 		Console result:
 		<p id="result" style="border: 1px solid black; width: 450px; min-height: 100px;height: auto"></p>
 	</div>
+
+	<div style="position: absolute; top: 600px">
+		<strong>Examples</strong> <br>
+		1. Variables and assigments <button onclick="loadExample('p1')" id="p1">Try</button> <br>
+		2. Error and logs <button onclick="loadExample('p2')" id="p2">Try</button> <br>
+		3. Conditions and loops <button onclick="loadExample('p3')" id="p3">Try</button> <br>
+		4. Simple text app - bubble sort <button onclick="loadExample('p4')" id="p4">Try</button> <br>
+		4. Recursion app - fibonacci sequnce <button onclick="loadExample('p5')" id="p5">Try</button> <br>
+		6. Simple graphic app - rock/paper/scssors <button onclick="loadExample('p6')" id="p6">Try</button>
+	</div>
+
+	<script>
+		function loadExample(example) {
+            $.get('prikklady/'+example+'.txt',function (data) {
+                editor.setValue(data);
+            }, 'text');
+        }
+	</script>
 
 	<script src="bundle.js"></script>
 	<script src="ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>

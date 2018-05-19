@@ -20,7 +20,6 @@ function buildAst(inputText){
 
 
     var visitor = new Visitor(SymbolVisitor.funct, scope, SymbolVisitor.classes);
-
     visitor.visit(tree);
     console.log("done");
 

@@ -21,13 +21,3 @@ end
 List numbers = [3,5,1,4,2]
 List sorted = sort(numbers)
 println(sorted)
-
-//Fibonaci
-def fib(Number n)
-  if n < 2 do
-    return n;
-  else do
-    return fib(n-2) + fib(n-1);
-  end
-end
-print(fib(10));

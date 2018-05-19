@@ -1,51 +1,13 @@
-//write code here
-//write code here
 
-initPlayground();
-
-
-def clear()
- 
- clearPlayground();
-
+//Fibonaci
+def fib(Number n)
+  if n < 2 do
+    return n;
+  else do
+    return fib(n-2) + fib(n-1)
+  end
 end
-
-
-
-def show(String text)
- 
- drawText(text,300,300);
-
+for i = 1 to 10 do
+  print(fib(i))
+  print(' ')
 end
-
-
-
-
-def drawImage(String path,Number x, Number y)
-
- createImage(path,x,y);
-
-end
-
-
-
-strokeStyle("red");
-
-drawLine(10,10,50,50);
-
-
-fillStyle("green");
-
-fillRect(30,30,50,50);
-
-
-createButton('btn1','Clear canvas', 'clear');
-
-
-createButton('bn2','Rock','show',"You rock");
-
-createButton('bn3','Paper','show',"You paper");
-
-createButton('bn4','Scissors','show',"You scissors");
-
-createButton('btn5','Image','drawImage',"img.png",10,10);

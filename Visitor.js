@@ -240,8 +240,8 @@ Visitor.prototype.visitPowerExpression = function (ctx) {
 
 Visitor.prototype.visitEqExpression = function (ctx) {
     return (ctx.op.type === WebiParser.Equals)
-        ? this.visit(ctx.expression(0)) == this.visit(ctx.expression(1))
-        : this.visit(ctx.expression(0)) != this.visit(ctx.expression(1));
+        ? this.visit(ctx.expression(0)) === this.visit(ctx.expression(1))
+        : this.visit(ctx.expression(0)) !== this.visit(ctx.expression(1));
 };
 
 Visitor.prototype.visitNotExpression = function (ctx) {
